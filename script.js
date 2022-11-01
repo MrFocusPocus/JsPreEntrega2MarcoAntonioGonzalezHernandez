@@ -102,7 +102,6 @@ while (!exitMenu) {
     switch (menuChoice.toLowerCase()) {
         case "exit":
             exitMenu = true
-            console.log(menuChoice)
             break;
         case "1":
             let name = prompt("What is the persons name?")
@@ -111,7 +110,6 @@ while (!exitMenu) {
             let startingDebt = prompt("What is the person starting debt?")
             let persona = new Persona(name, dob, startingAmount, startingDebt)
             personas.push(persona)
-            console.log(menuChoice)
             break;
         case "2":
             personChoice = SelectPerson(personas)
@@ -122,7 +120,6 @@ while (!exitMenu) {
             let end = prompt("When will/did you leave this job?")
             let job = new Job(company, role, salary, start, end)
             personas[personChoice].addJob(job)
-            console.log(menuChoice)
             break;
         case "3":
             console.log(menuChoice)
@@ -130,11 +127,9 @@ while (!exitMenu) {
         case "4":
             personChoice = SelectPerson(personas)
             personas[personChoice].showInfo()
-            console.log(menuChoice)
             break;
         default:
             exitMenu = true
-            console.log(menuChoice)
             break;
     }
 }
