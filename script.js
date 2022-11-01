@@ -75,6 +75,23 @@ class Persona {
     }
 }
 
+//Menu
+let exitMenu = false
+const menuString = "What would you like to do\
+                    \nlol"
+while (!exitMenu) {
+    let menuChoice = prompt(menuString)
+    switch (menuChoice.toLowerCase()) {
+        case "exit":
+            exitMenu = true
+            console.log(menuChoice)
+            break;
+    
+        default:
+            break;
+    }
+}
+
 const persona1 = new Persona('Marco Antonio', '19-12-1994')
 const job1 = new Job('GEOSAT LTD','Project Manager', 1000,3,8)
 const job2 = new Job('SumUp', 'Business Analyst', 1600,9,12)
